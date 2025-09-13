@@ -1,0 +1,86 @@
+/* General reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0f172a;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background animation */
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Login container */
+.login-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+.login-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #00f2fe;
+}
+.subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Input fields */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+.input-group input::placeholder { color: #bbb; }
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+/* Footer */
+.footer {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | AI Finance Dashboard</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <div id="tsparticles"></div>
+  
+  <div class="login-container">
+    <h1>💰 Student  Finance Manager</h1>
+    <p class="subtitle">Please log in to continue</p>
+    
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="footer">🔒 Secure login with AI-powered finance tracking</p>
+  </div>
+
+  <script>
+    // Background animation
+    tsParticles.load("tsparticles", {
+      particles: {
+        color: { value: "#00f2fe" },
+        links: { enable: true, color: "#00f2fe", opacity: 0.3, distance: 120 },
+        move: { enable: true, speed: 2 },
+        number: { value: 60 },
+        size: { value: { min: 1, max: 4 } }
+      }
+    });
+
+    // Simple login redirect
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if(username && password){
+        window.location.href = "pro.html"; // redirect to dashboard
+      } else {
+        alert("Please enter both username and password.");
+      }
+    });
+  </script>
+</body>
+</html>

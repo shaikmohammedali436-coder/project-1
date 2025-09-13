@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Finance Manager</title>
+  <link rel="stylesheet" href="pro.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <div id="tsparticles"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <h1>💰 Student Finance Manger </h1>
+    <p>Smart Expense Tracking • Predictive Analysis • Budget Alerts</p>
+    <div class="cool">
+    <nav>
+      <button class="menu-toggle">☰</button>
+      <ul class="nav-links">
+        <li><a href="#balance">Balance</a></li>
+        <li><a href="#expenses">Expenses</a></li>
+        <li><a href="#predictive">Predictive</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#income">Income</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#insights">AI Insights</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Balance -->
+    <div class="card balance" id="balance">
+      <img src="https://cdn-icons-png.flaticon.com/512/2331/2331949.png" class="card-icon" alt="Balance Icon">
+      <h2>Total Balance</h2>
+      <p class="balance-amount">$12,540</p>
+    </div>
+
+    <!-- Expense Categorization -->
+    <div class="card" id="expenses">
+      <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Expenses Icon" class="card-icon">
+      <h2>Expense Categorization</h2>
+      <div class="chart-box">
+        <canvas id="expenseChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Predictive Spending -->
+    <div class="card" id="predictive">
+      <img src="https://cdn-icons-png.flaticon.com/512/3314/3314373.png" alt="Predictive Icon" class="card-icon">
+      <h2>Predictive Spending</h2>
+      <div class="chart-box">
+        <canvas id="predictiveChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Goal Tracking -->
+    <div class="card goal" id="goals">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Goals Icon" class="card-icon">
+      <h2>Goal Tracking</h2>
+      <div class="progress">
+        <p>🏠 House Fund</p>
+        <div class="bar"><div style="width:65%"></div></div>
+      </div>
+      <div class="progress">
+        <p>🚗 Car Fund</p>
+        <div class="bar"><div style="width:40%"></div></div>
+      </div>
+      <div class="progress">
+        <p>🎓 Education Fund</p>
+        <div class="bar"><div style="width:75%"></div></div>
+      </div>
+    </div>
+
+    <!-- Budget Alerts -->
+    <div class="card alerts" id="alerts">
+      <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Alerts Icon" class="card-icon">
+      <h2>Budget Alerts</h2>
+      <ul>
+        <li>⚠️ Food expenses are <strong>20% above average</strong>!</li>
+        <li>✅ Transport <strong>within budget</strong>.</li>
+        <li>⚠️ Entertainment <strong>nearing limit</strong>.</li>
+      </ul>
+    </div>
+
+    <!-- Income vs Expenses -->
+    <div class="card" id="income">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="Income Icon" class="card-icon">
+      <h2>Income vs Expenses</h2>
+      <div class="chart-box">
+        <canvas id="incomeChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Recent Transactions -->
+    <div class="card" id="transactions">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Transactions Icon" class="card-icon">
+      <h2>Recent Transactions</h2>
+      <table>
+        <tr><th>Date</th><th>Category</th><th>Amount</th></tr>
+        <tr><td>2025-09-01</td><td>Food</td><td>-$45</td></tr>
+        <tr><td>2025-09-02</td><td>Transport</td><td>-$15</td></tr>
+        <tr><td>2025-09-04</td><td>Salary</td><td>+$2000</td></tr>
+        <tr><td>2025-09-05</td><td>Bills</td><td>-$120</td></tr>
+      </table>
+    </div>
+
+    <!-- AI Insights -->
+    <div class="card insights" id="insights">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Icon" class="card-icon">
+      <h2>AI Insights</h2>
+      <p>💡 You spent 20% more on Food this month compared to last month.</p>
+      <p>📈 At your current savings rate, you’ll reach your house goal in 14 months.</p>
+      <p>⚡ Reduce entertainment spending by 10% to stay within budget.</p>
+    </div>
+  </main>
+
+  <script src="pro.js"></script>
+</body>
+</html>
